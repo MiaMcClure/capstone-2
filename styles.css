@@ -1,0 +1,65 @@
+/* all pages */
+footer {
+    background-color: #252A15;
+    color:#FEFAE0;
+}
+.btn {
+    background-color: #252A15;
+    color: #FEFAE0;
+}
+/* home page */
+.home-h2 {
+    text-align: center;
+    color: #606C38;
+}
+#home-article-1 {
+    background-color: #DDA15E;
+    margin-bottom: 5vw;
+}
+#home-article-2 {
+    background-color: #606C38;
+    color: #FEFAE0;
+}
+.home-header {
+    text-align: center;
+    color: #252A15;
+}
+.home-text {
+    text-align: center;
+}
+.banner {
+    color: white;
+    background: url(../images/Flume-StoryImg_2.jpg) top left/cover no-repeat;
+    height: 25%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* park search page */
+#search-clear {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 3vw;
+}
+#clear {
+    background-color: #FEFAE0;
+    color: #252A15;
+}
+#results-title {
+    background-color: #606C38;
+    color: white;
+    text-align: center;
+    padding: 2vw;
+}
+
+/* mountain info page */
+#mountainName {
+    background-color: #BC6C25;
+    color: white;
+    text-align: center;
+    padding: 2vw;
+}
+#mountainResults {
+    background-color: #DDA15E;
+}
