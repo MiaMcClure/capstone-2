@@ -23,29 +23,33 @@
         </div>
 
 
-    </header> 
+    </header>
 
     <!-- main content -->
     <main>
         <h1>Mountain Information</h1>
         <!-- mountain selection -->
         <div class="container">
-            <label for="mountains">Select a Mountain</label>
+            <label for="mountainsSelection">Select a Mountain</label>
             <div class="input-group mb-3">
                 <select name="mountains" id="mountainsSelection">
                     <!-- use javascript to fill -->
                 </select>
 
                 <!-- button -->
-                <button class="btn">Get Info</button>
+                <button class="btn" id="infoBtn">Get Info</button>
             </div>
         </div>
 
         <!-- mountain results -->
-        <div id="mountainResults">
-            <h2 id="mountainName">Mountain Name</h2>
-            <p>stuff here use javascript later</p>
+        <div id="mountainName">
+            <!-- display title with javascript -->
         </div>
+        <div id="mountainResults">
+            <!-- use javascript to fill with info -->
+            
+        </div>
+
 
         <!-- explore mountain activities -->
     </main>
@@ -65,4 +69,6 @@
         crossorigin="anonymous"></script>
 
     <!-- my external scripts -->
+    <script src="scripts/mountainData.js"></script>
+    <script src="scripts/mountains.js"></script>
 </body>

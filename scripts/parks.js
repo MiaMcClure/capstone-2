@@ -27,8 +27,6 @@ function init() {
     addOptions(selectLocation, locationsArray);
     addOptions(selectType, parkTypesArray);
 
-  
-
     // create searchfunction
     function search(event) {
         event.preventDefault();
@@ -39,13 +37,17 @@ function init() {
         // search by location AND type
         if (selectedLocation && selectedType) {
             results = nationalParksArray.filter(park => park.State === selectedLocation && park.LocationName.includes(selectedType));
-        } else if (selectedLocation) {
+            console.log(results);
+        } else if (selectedLocation && !selectedType) {
             // search by location only
             results = nationalParksArray.filter(park => park.State === selectedLocation);
-        } else if (selectedType) {
+            console.log(results);
+        } else if (selectedType && !selectLocation) {
             // search by type only
             results = nationalParksArray.filter(park => park.LocationName.includes(selectedType));
+            console.log(results)
         }
+        // console.log(results.length);
         // display results
         if (results.length > 0) {
             results.forEach((park) => {
@@ -69,7 +71,7 @@ function init() {
             <a href="#" class="btn btn-primary">Go somewhere</a>
         </div>
         </div>`;
-    }
+    } 
 
     // event listener
     searchBtn.addEventListener("click", search);
