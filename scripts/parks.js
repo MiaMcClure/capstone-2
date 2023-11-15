@@ -5,7 +5,7 @@ function init() {
     // add placeholder images to cards
     let image = 'img';
     let imageValue = "park-placeholder.jpeg";
-     for (let i = 0; i < nationalParksArray.length; i++) {
+    for (let i = 0; i < nationalParksArray.length; i++) {
         nationalParksArray[i].image = imageValue;
     };
 
@@ -14,7 +14,7 @@ function init() {
     const selectType = document.getElementById("byType");
     const searchBtn = document.getElementById("search");
     const resultsList = document.getElementById("results");
-    
+
     // create function to add options
     function addOptions(selectElement, dataArray) {
         for (let index = 0; index < dataArray.length; index++) {
@@ -35,19 +35,18 @@ function init() {
         let results;
 
         // search by location AND type
-        if (selectedLocation && selectedType) {
+        if (selectedLocation != 'select' && selectedType != 'select') {
             results = nationalParksArray.filter(park => park.State === selectedLocation && park.LocationName.includes(selectedType));
             console.log(results);
-        } else if (selectedLocation && !selectedType) {
+        } else if (selectedLocation && selectedType === 'select') {
             // search by location only
             results = nationalParksArray.filter(park => park.State === selectedLocation);
             console.log(results);
-        } else if (selectedType && !selectLocation) {
+        } else if (selectedType && selectedLocation === 'select') {
             // search by type only
             results = nationalParksArray.filter(park => park.LocationName.includes(selectedType));
-            console.log(results)
+            console.log(results);
         }
-        // console.log(results.length);
         // display results
         if (results.length > 0) {
             results.forEach((park) => {
@@ -59,7 +58,6 @@ function init() {
             resultsList.innerHTML = "No Parks found :("
         }
     }
-
     // create bootstrap card
     function createCard(_park) {
         return `
@@ -71,7 +69,7 @@ function init() {
             <a href="#" class="btn btn-primary">Go somewhere</a>
         </div>
         </div>`;
-    } 
+    }
 
     // event listener
     searchBtn.addEventListener("click", search);

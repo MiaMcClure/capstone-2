@@ -1,113 +1,85 @@
 "use strict"
 window.onload = init;
 function init() {
-    // add placeholder images to cards
-    let image = 'img';
-    let imageValue = "park-placeholder.jpeg";
-    for (let i = 0; i < nationalParksArray.length; i++) {
-        nationalParksArray[i].image = imageValue;
-    };
+    // create variables
+    const selectMountain = document.getElementById("mountainsSelection");
+    const mountainName = document.getElementById("mountainName");
+    const mountainInfo = document.getElementById("mountainResults");
+    const infoBtn = document.getElementById("infoBtn");
+    let viewImages = document.getElementById("mountainsCollage");
+    let selectedMountain;
 
-    // create variables 
-    const selectLocation = document.getElementById("byLocation");
-    const selectType = document.getElementById("byType");
-    const searchBtn = document.getElementById("search");
-    const resultsList = document.getElementById("results");
+    // generate mountains images and buttons
+    function generateDestinationImg(destination) {
+        return `
+        <div class="display">
+            <img src="images/${destination.img}" class="destination-img" alt="${destination.name}">
+            <div class="overlay">
+                <button class="imgBtn" name="${destination.name}">${destination.name}</button>
+            </div>
+         </div>
+        `
+    }
+    
+    // display mountains on page
+    function displayImages(array) {
+        for (let index = 0; index < array.length; index++) {
+            let destination = array[index];
+            let destinationImg = generateDestinationImg(destination);
+            viewImages.insertAdjacentHTML("beforeend", destinationImg);
+        }
+    }
 
-    // create function to add options
+    // function to add options
     function addOptions(selectElement, dataArray) {
         for (let index = 0; index < dataArray.length; index++) {
-            let option = new Option(dataArray[index], dataArray[index]);
+            let option = new Option(dataArray[index].name, dataArray[index].name);
             selectElement.appendChild(option);
         }
     }
 
-    // call function for location and type selections
-    addOptions(selectLocation, locationsArray);
-    addOptions(selectType, parkTypesArray);
+    // call functions
+    addOptions(selectMountain, mountainsArray);
+    displayImages(mountainsArray);
 
-
-    // search by location
-    function searchByLocation(event) {
-        event.preventDefault();
-        // declare variables
-        const selectedLocation = selectLocation.value;
-        let results = nationalParksArray.filter(park => park.State === selectedLocation);
-
-        //display results
-        if (results.length > 0) {
-            results.forEach((park) => {
-                const cardHTML = createCard(park);
-                resultsList.insertAdjacentHTML("beforeend", cardHTML);
-            })
-            return results;
-        } else {
-            resultsList.innerHTML = "No Parks found :("
-        }
-    }
-
-    // search by park type 
-    function searchByType(event) {
-        event.preventDefault();
-
-        // create variables
-        const selectedType = selectType.value;
-        let results = nationalParksArray.filter(park => park.LocationName.includes(selectedType));
-
-        // display results
-        if (results.length > 0) {
-            results.forEach((park) => {
-                const cardHTML = createCard(park);
-                resultsList.insertAdjacentHTML("beforeend", cardHTML);
-            })
-            return results;
-        } else {
-            resultsList.innerHTML = "No Parks found :("
-        }
-    }
-
-    // // create searchfunction
-    // function search(event) {
-    //     event.preventDefault();
-    //     const selectedLocation = selectLocation.value;
-    //     const selectedType = selectType.value;
-    //     let results;
-
-    //     // search by location AND type
-    //     if (selectedLocation && selectedType) {
-    //         results = nationalParksArray.filter(park => park.State === selectedLocation && park.LocationName.includes(selectedType));
-    //     } else if (selectedLocation) {
-    //         // search by location only
-    //         results = nationalParksArray.filter(park => park.State === selectedLocation);
-    //     } else if (selectedType) {
-    //         // search by type only
-    //         results = nationalParksArray.filter(park => park.LocationName.includes(selectedType));
-    //     }
-    //     // display results
-    //     if (results.length > 0) {
-    //         results.forEach((park) => {
-    //             const cardHTML = createCard(park);
-    //             resultsList.insertAdjacentHTML("beforeend", cardHTML);
-    //         })
-    //         return results;
-    //     } else {
-    //         resultsList.innerHTML = "No Parks found :("
-    //     }
-    // }
-
-    // create bootstrap card
-    function createCard(_park) {
+    function generateInfo(_mountain) {
         return `
-        <div class="card" style="width: 18rem;">
-        <img src="${_park.image}" class="card-img-top" alt="...">
-        <div class="card-body">
-            <h5 class="card-title">${_park.LocationName}</h5>
-            <p class="card-text">${_park.State}.</p>
-            <a href="#" class="btn btn-primary">Go somewhere</a>
-        </div>
-        </div>`;
+        <div class="container results-container">
+                <img src="images/${_mountain.img}" alt="" class="results-img">
+                    <div class="name-overlay">
+                        <h4>${_mountain.name}</h4>
+                    </div>
+                    <div class="info-overlay">
+                        <p> ${_mountain.desc} </p>
+                        <p>Coordinates: ${_mountain.coords.lat}, ${_mountain.coords.lng} </p>
+                        <p>Elevation: ${_mountain.elevation} </p>
+                    </div>
+            </div>
+
+        `
+    }
+    // display mountain info 
+    function displayInfo(event) {
+        event.preventDefault();
+        // set selectedMountain variable depending on which button has been clicked
+        if (event.target.classList.contains('imgBtn')) {
+            // when imgBtn is clicked
+            selectedMountain = event.target.getAttribute('name');
+        } else if (event.target === infoBtn) {
+            // when get info button is clicked
+            selectedMountain = selectMountain.value;
+        }
+        // other variables
+        const mountain = mountainsArray.find(_mountain => _mountain.name === selectedMountain);
+        const display = generateInfo(mountain);
+        // display on page
+
+        mountainInfo.innerHTML = display;
+
     }
 
-    // event listener
-    searchBtn.addEventListener("click", searchByLocation);
+
+    // create event listeners
+    document.addEventListener('click', displayInfo)
 }
+

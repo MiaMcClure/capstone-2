@@ -28,43 +28,34 @@
     <!-- main content -->
     <main>
         <h2>TEST PAGE </h2>
-        <div class="container">
-            <form>
-                <div class="form-group">
-                    <!-- selections -->
-                    <div class="row">
-                        <!-- location input -->
-                        <div class="col-4">
-                            <label for="byLocation">By Location</label>
-                            <select name="by-location" id="byLocation" class="form-control">
-                                <option value="select" >Select</option>
-                                <!-- use javascript to fill -->
-                            </select>
-                        </div>
-                        <!-- type input -->
-                        <div class="col-4">
-                            <label for="byType">By Type</label>
-                            <select name="by-type" id="byType" class="form-control">
-                                <option value="select">Select</option>
-                                <!-- use javascript to fill -->
-                            </select>
-                        </div>
-                    </div>
 
-                    <!-- search and clear buttons -->
-                    <div class="row">
-                        <div class="input-group" id="search-clear">
-                            <button class="btn" id="search">Search</button>
-                            <button class="btn" id="clear">Clear</button>
-                        </div>
-                    </div>
+
+        <main>
+            <h1>Mountain Information</h1>
+            <!-- mountain selection -->
+            <div class="container">
+                <label for="mountainsSelection">Select a Mountain</label>
+                <div class="input-group mb-3">
+                    <select name="mountains" id="mountainsSelection">
+                        <!-- use javascript to fill -->
+                    </select>
+
+                    <!-- button -->
+                    <button class="btn" id="infoBtn">Get Info</button>
                 </div>
-            </form>
-        </div>
+            </div>
 
-        <div id="results">
-            <!-- use javascript to fill -->
-        </div>
+            <!-- mountain results -->
+            <div id="mountainResults">
+                <!-- use javascript to fill with info -->
+            </div>
+            <!-- explore mountains -->
+            <h3>Explore Mountains</h3>
+            <div id="mountainsCollage">
+                <!-- use javascript to fill -->
+            </div>
+
+        </main>
 
     </main>
     <!-- footer -->
@@ -85,5 +76,6 @@
     <script src="scripts/locationData.js"></script>
     <script src="scripts/nationalParkData.js"></script>
     <script src="scripts/parkTypeData.js"></script>
+    <script src="scripts/mountainData.js"></script>
     <script src="test.js"></script>
 </body>
