@@ -23,12 +23,6 @@ footer {
 }
 
 /* home page */
-#video {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
 #home-article-1 {
     background-color: #DDA15E;
 }
@@ -38,20 +32,60 @@ footer {
     color: #FEFAE0;
 }
 
+#video-div-1 {
+    height: 80vh;
+    margin-bottom: 10vw;
+}
+
+#home-vertical-line {
+    width: 1px;
+    height: 90px;
+    max-height: 100%;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    position: absolute;
+    background-color: #fefae0;
+}
+
+
+#home-overlap {
+    display: flex;
+    align-items: center;
+    width: 75vw;
+    height: 15vh;
+    top: 78%;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    position: absolute;
+    background-color: #252a15;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 1);
+    z-index: 2;
+}
+
+.overlap-link {
+    flex: 1;
+    text-align: center;
+    color: #fefae0;
+    text-decoration: none;
+    padding: 10px;
+}
+
+
+
 .video-container {
     position: absolute;
     top: 0;
     left:0;
     width: 100%;
-    height: 50%;
-    overflow: hidden;
-}
-
-.video-container {
-    width: 100%;
     height: 85%;
     overflow: hidden;
 }
+
 .categories-container {
     display: grid;
     grid-gap: 10px;
@@ -113,6 +147,50 @@ footer {
     color: white;
     text-align: center;
     padding: 2vw;
+}
+
+.maincontainer {
+    position: relative;
+    width: 80vw;
+    height: 320px;
+    overflow: hidden;
+    margin: 50px auto;
+}
+
+.thecard {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: all 0.5s ease;
+}
+
+.thecard:hover {
+    transform: rotateY(180deg);
+}
+
+.thefront {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    background-position: center;
+}
+
+.theback {    
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    background-color: #606c38;
+    color: white;
+    text-align: center;
+    transform: rotateY(180deg);
+}
+
+.back-img {
+    width: 100%;
+    aspect-ratio: 1 / 1;
 }
 
 /* mountain info page */
