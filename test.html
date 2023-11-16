@@ -10,6 +10,10 @@
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <!-- custom css -->
     <link rel="stylesheet" href="styles.css">
+    <!-- test styles -->
+    <style>
+
+    </style>
 </head>
 
 <body>
@@ -27,37 +31,198 @@
 
     <!-- main content -->
     <main>
-        <h2>TEST PAGE </h2>
 
+        <!-- explore outdoors -->
+        <div class="div-card">
+            <h3>Explore the Outdoors</h3>
+            <!-- gategories grid -->
+            <div class="categories-container">
+                <div data-overlay-text="Road Trips">
+                    <img class="category-img" src="images/extra/road-trip.jpg" alt="road-trip">
+                </div>
+                <div data-overlay-text="Nature Photograpgy">
+                    <img class="category-img" src="images/extra/taking-photo.jpg" alt="taking-photo">
+                </div>
+                <div data-overlay-text="Outdoor Classrooms">
+                    <img class="category-img" src="images/extra/kids-hiking.jpg" alt="kids-hiking">
+                </div>
+                <div data-overlay-text="Sunsets">
+                    <img class="category-img" src="images/extra/grand-canyon-sunset.jpg" alt="grand-canyon-sunset">
+                </div>
+                <div data-overlay-text="Hiking">
+                    <img class="category-img" src="images/extra/family-hiking.jpg" alt="family-hiking">
+                </div>
+                <div data-overlay-text="Wildlife">
+                    <img class="category-img" src="images/extra/black-bear.jpg" alt="black-bear">
+                </div>
+                <div data-overlay-text="Water Activities">
+                    <img class="category-img" src="images/extra/canoe-man.jpg" alt="canoe-man">
+                </div>
+                <div data-overlay-text="Camping">
+                    <img class="category-img" src="images/extra/camping-with-dog.jpg" alt="camping_with_dog">
+                </div>
+                <div data-overlay-text="Family Activities">
+                    <img class="category-img" src="images/extra/beach-family.jpg" alt="family_on_beach">
+                </div>
 
-        <main>
-            <h1>Mountain Information</h1>
-            <!-- mountain selection -->
-            <div class="container">
-                <label for="mountainsSelection">Select a Mountain</label>
-                <div class="input-group mb-3">
-                    <select name="mountains" id="mountainsSelection">
-                        <!-- use javascript to fill -->
-                    </select>
+            </div>
+        </div>
 
-                    <!-- button -->
-                    <button class="btn" id="infoBtn">Get Info</button>
+        <!-- article TBD-->
+        <article id="home-article-1" class="div-card">
+            <div class="container row">
+                <picture class="col-4 m-3">
+                    <img src="images/Cabot-StoryImg.jpg" class="img-fluid" alt="image desc">
+                </picture>
+                <div class="col m-3">
+                    <h3>Some Title Here</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae numquam
+                        optio facilis et sint alias
+                        nobis aliquid quia pariatur, sit, quae dicta provident tempora amet itaque voluptatibus
+                        autem
+                        tempore doloribus?
+                        Ipsum fuga voluptatum dolorem suscipit adipisci, sed repudiandae omnis? Provident
+                        praesentium
+                        nesciunt ipsam non! Optio delectus voluptas incidunt est, sunt molestiae fuga voluptatibus,
+                        totam
+                        nam officiis aperiam aliquam. Minima, doloribus.</p>
                 </div>
             </div>
+        </article>
 
-            <!-- mountain results -->
-            <div id="mountainResults">
-                <!-- use javascript to fill with info -->
+        <!-- featured articles carousel -->
+        <section id="fetured-articles" class="div-card">
+            <h2 class="home-h2">Featured Articles</h2>
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div id="carouselExampleInterval" class="carousel slide carousel-dark" data-bs-ride="carousel">
+                            <div class="carousel-inner">
+                                <div class="carousel-item active" data-bs-interval="10000">
+                                    <div class="carousel-card-container">
+                                        <div class="row">
+                                            <div class="col col-sm-12 col-md-12 col-lg-4">
+                                                <!-- place card here -->
+                                                <div class="card"
+                                                    style="background: url('images/Adams-StoryImage_2.jpg') center/cover no-repeat; color: #fff;">
+                                                    <div class="card-body">
+                                                        <!-- Card content goes here -->
+                                                        <h5 class="card-title">Card Title</h5>
+                                                        <p class="card-text">Some text content for the card.</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="vanish col-lg-4">
+                                                <!-- place card here -->
+                                                <div class="card"
+                                                    style="background: url('images/Adams-StoryImage_2.jpg') center/cover no-repeat; color: #fff;">
+                                                    <div class="card-body">
+                                                        <!-- Card content goes here -->
+                                                        <h5 class="card-title">Card Title</h5>
+                                                        <p class="card-text">Some text content for the card.</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="vanish col-lg-4">
+                                                <!-- place card here -->
+                                                <div class="card"
+                                                    style="background: url('images/Adams-StoryImage_2.jpg') center/cover no-repeat; color: #fff;">
+                                                    <div class="card-body">
+                                                        <!-- Card content goes here -->
+                                                        <h5 class="card-title">Card Title</h5>
+                                                        <p class="card-text">Some text content for the card.</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="carousel-item" data-bs-interval="2000">
+                                    <div class="carousel-card-container">
+                                        <div class="row">
+                                            <div class="col col-sm-12 col-md-12 col-lg-4">
+                                                <!-- place card here -->
+                                                <div class="card"
+                                                    style="background: url('images/Adams-StoryImage_2.jpg') center/cover no-repeat; color: #fff;">
+                                                    <div class="card-body">
+                                                        <!-- Card content goes here -->
+                                                        <h5 class="card-title">Card Title</h5>
+                                                        <p class="card-text">Some text content for the card.</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="vanish col-lg-4">
+                                                <!-- place card here -->
+                                                <div class="card"
+                                                    style="background: url('images/Adams-StoryImage_2.jpg') center/cover no-repeat; color: #fff;">
+                                                    <div class="card-body">
+                                                        <!-- Card content goes here -->
+                                                        <h5 class="card-title">Card Title</h5>
+                                                        <p class="card-text">Some text content for the card.</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="vanish col-lg-4">
+                                                <!-- place card here -->
+                                                <div class="card"
+                                                    style="background: url('images/Adams-StoryImage_2.jpg') center/cover no-repeat; color: #fff;">
+                                                    <div class="card-body">
+                                                        <!-- Card content goes here -->
+                                                        <h5 class="card-title">Card Title</h5>
+                                                        <p class="card-text">Some text content for the card.</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <button class="carousel-control-prev" type="button"
+                                data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button class="carousel-control-next" type="button"
+                                data-bs-target="#carouselExampleInterval" data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Next</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <!-- explore mountains -->
-            <h3>Explore Mountains</h3>
-            <div id="mountainsCollage">
-                <!-- use javascript to fill -->
-            </div>
+            <button class="btn btn-secondary m-2">Read More</button>
+        </section>
 
-        </main>
+        <!-- second article -->
+        <article id="home-article-2" class="div-card">
+            <div class="container row">
+                <picture class="col-4 m-3">
+                    <img src="images/Cabot-StoryImg.jpg" class="img-fluid" alt="image desc">
+                </picture>
+                <div class="col m-3">
+                    <h3>Some Title Here</h3>
+                    <p class="home-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae numquam
+                        optio facilis et sint alias
+                        nobis aliquid quia pariatur, sit, quae dicta provident tempora amet itaque voluptatibus
+                        autem
+                        tempore doloribus?
+                        Ipsum fuga voluptatum dolorem suscipit adipisci, sed repudiandae omnis? Provident
+                        praesentium
+                        nesciunt ipsam non! Optio delectus voluptas incidunt est, sunt molestiae fuga voluptatibus,
+                        totam
+                        nam officiis aperiam aliquam. Minima, doloribus.</p>
+                </div>
+            </div>
+        </article>
+
+        <!-- bottom image goes here -->
+        <div class="banner">
+            <p> fix this so full image shows</p>
+        </div>
 
     </main>
+
     <!-- footer -->
     <footer>
         <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ea fugit molestias, amet sunt ad optio, illum ipsam

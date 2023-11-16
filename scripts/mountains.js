@@ -3,7 +3,6 @@ window.onload = init;
 function init() {
     // create variables
     const selectMountain = document.getElementById("mountainsSelection");
-    const mountainName = document.getElementById("mountainName");
     const mountainInfo = document.getElementById("mountainResults");
     const infoBtn = document.getElementById("infoBtn");
     let viewImages = document.getElementById("mountainsCollage");
@@ -20,7 +19,7 @@ function init() {
          </div>
         `
     }
-    
+
     // display mountains on page
     function displayImages(array) {
         for (let index = 0; index < array.length; index++) {
@@ -42,19 +41,19 @@ function init() {
     addOptions(selectMountain, mountainsArray);
     displayImages(mountainsArray);
 
-    // generate display generate mountain information
+    // generate mountain information
     function generateInfo(_mountain) {
         return `
         <div class="container results-container">
-                <img src="images/${_mountain.img}" alt="" class="results-img">
-                    <div class="name-overlay">
-                        <h4>${_mountain.name}</h4>
-                    </div>
-                    <div class="info-overlay">
-                        <p> ${_mountain.desc} </p>
-                        <p>Coordinates: ${_mountain.coords.lat}, ${_mountain.coords.lng} </p>
-                        <p>Elevation: ${_mountain.elevation} </p>
-                    </div>
+            <img src="images/${_mountain.img}" alt="" class="results-img">
+            <div class="name-overlay">
+                <h4>${_mountain.name}</h4>
+            </div>
+            <div class="info-overlay">
+                <p> ${_mountain.desc} </p>
+                <p>Coordinates: ${_mountain.coords.lat}, ${_mountain.coords.lng} </p>
+                <p>Elevation: ${_mountain.elevation} </p>
+            </div>
             </div>
         `
     }

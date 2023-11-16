@@ -4,20 +4,33 @@ footer {
     color:#FEFAE0;
 }
 
+.div-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 50vw;
+    padding: 25px;
+    margin: 20px 0;
+    border: 1px solid #ccc;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
 .btn {
     background-color: #252A15;
     color: #FEFAE0;
 }
 
 /* home page */
-.home-h2 {
-    text-align: center;
-    color: #606C38;
+#video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 #home-article-1 {
     background-color: #DDA15E;
-    margin-bottom: 5vw;
 }
 
 #home-article-2 {
@@ -25,19 +38,59 @@ footer {
     color: #FEFAE0;
 }
 
-.home-header {
-    text-align: center;
-    color: #252A15;
+.video-container {
+    position: absolute;
+    top: 0;
+    left:0;
+    width: 100%;
+    height: 50%;
+    overflow: hidden;
 }
 
-.home-text {
-    text-align: center;
+.video-container {
+    width: 100%;
+    height: 85%;
+    overflow: hidden;
+}
+.categories-container {
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: repeat(3, 180px);
+    grid-template-rows: repeat(3, 180px);
+}
+
+.categories-container>div:before {
+    content: attr(data-overlay-text);
+    position: absolute;
+    bottom: 10%;
+    left: 10%;
+    background: rgba(0, 0, 0, 0.5);
+    opacity: 1;
+    color: #fff;
+}
+
+.categories-container>div {
+    position: relative;
+    overflow: hidden;
+}
+
+.categories-container>div>img {
+    max-width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+}
+
+.categories-container>div>img {
+    max-width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
 }
 
 .banner {
     color: white;
-    background: url(../images/Flume-StoryImg_2.jpg) top left/cover no-repeat;
-    height: 25%;
+    background: url(../images/Flume-StoryImg_2.jpg);
+    background-repeat: no-repeat;
+    height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
