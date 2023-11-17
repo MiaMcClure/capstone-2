@@ -11,8 +11,8 @@
     <!-- custom css -->
     <link rel="stylesheet" href="styles.css">
     <!-- test styles -->
-    <style>
     
+
     </style>
 </head>
 
@@ -30,114 +30,41 @@
     </header>
 
     <main>
-        <h1>Find a Park</h1>
-
-        <!-- search inputs -->
+        <h1>Mountain Information</h1>
+        <!-- mountain selection -->
         <div class="container">
-            <form>
-                <div class="form-group">
-                    <!-- selections -->
-                    <div class="row">
-                        <!-- location input -->
-                        <div class="col-4">
-                            <label for="byLocation">By Location</label>
-                            <select name="by-location" id="byLocation" class="form-control">
-                                <option value="select">Select</option>
-                                <!-- use javascript to fill -->
-                            </select>
-                        </div>
-                        <!-- type input -->
-                        <div class="col-4">
-                            <label for="byType">By Type</label>
-                            <select name="by-type" id="byType" class="form-control">
-                                <option value="select">Select</option>
-                                <!-- use javascript to fill -->
-                            </select>
-                        </div>
-                    </div>
+            <label for="mountainsSelection">Select a Mountain</label>
+            <div class="input-group mb-3">
+                <select name="mountains" id="mountainsSelection">
+                    <!-- use javascript to fill -->
+                </select>
 
-                    <!-- search and clear buttons -->
-                    <div class="row">
-                        <div class="input-group" id="search-clear">
-                            <button class="btn" id="search">Search</button>
-                            <button class="btn" id="clear">Clear</button>
-                        </div>
-                    </div>
-                </div>
-            </form>
+                <!-- button -->
+                <button class="btn" id="infoBtn">Get Info</button>
+            </div>
         </div>
 
-        <!-- results title-->
-        <h2 id="results-title">Showing ... of ... results</h2>
-
-        <!-- results -->
-        <div id="results">
+        <!-- mountain results -->
+        <div id="mountainName">
+            <!-- display title with javascript -->
+        </div>
+        <div id="mountainResults">
+            <!-- use javascript to fill with info -->
+        </div><!-- mountain results -->
+        <div id="mountainName">
+            <!-- display title with javascript -->
+        </div>
+        <div id="mountainResults">
+            <!-- use javascript to fill with info -->
+        </div>
+        <!-- explore mountains -->
+        <div id="mountainsCollage" class="div-card">
+            <h3>Explore Mountains</h3>
             <!-- use javascript to fill -->
         </div>
 
-        <!-- test card -->
-        <!-- <div class="card" style="width: 18rem;">
-            <img src="images/extra/park-placeholder.jpeg" class="card-img-top" alt="park-placeholder-img">
-            <div class="card-body">
-                <h5 class="card-title">${_park.LocationName}</h5>
-                <p class="card-text">${_park.State}.</p>
-                <a href="#" class="btn btn-primary">Go somewhere</a>
-            </div>
-        </div> -->
 
-        <div class="maincontainer">
-            <div class="thecard">
-                <!-- front -->
-                <div class="thefront" data-overlay-text="Park Name"
-                    style="background-image: url('images/extra/park-placeholder.jpg');">
-                </div>
-                <!-- back -->
-                <div class="theback">
-                    <div class="row">
-                        <div class="col-4">
-                            <img class="back-img" src="images/extra/park-placeholder.jpg" alt="park-placeholder">
-                        </div>
-                        <div class="park-info col-8 mt-3">
-                            <h5 class="card-title">${_park.LocationName}</h5>
-                            <br>
-                            <p>Visit (city), (state) to experience stunningviews, watch wildlife, and learn about the
-                                inspiring history of this park.</p>
-                            <br>
-                            <p>Lorem, ipsum dolor sit amet  elit. Ad, quosreiciendis.</p>
-                            <a href="#" class="btn btn-primary">visit ite</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-
-        <div class="maincontainer">
-            <div class="thecard">
-
-                <div class="thefront">
-                    the front of the card
-                </div>
-                <!-- back -->
-                <div class="theback">
-                    the back of the card
-                </div>
-            </div>
-
-        </div>
-
-
-
-
-        
-
-        <!-- explore park activities -->
     </main>
-
-
-
-
-
 
 
     <!-- footer -->
@@ -158,5 +85,7 @@
     <script src="scripts/locationData.js"></script>
     <script src="scripts/nationalParkData.js"></script>
     <script src="scripts/parkTypeData.js"></script>
+    <script src="scripts/mountainData.js"></script>
     <script src="test.js"></script>
+    
 </body>

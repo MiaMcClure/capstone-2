@@ -15,6 +15,7 @@ footer {
     margin: 20px 0;
     border: 1px solid #ccc;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: auto;
 }
 
 .btn {
@@ -74,7 +75,6 @@ footer {
     text-decoration: none;
     padding: 10px;
 }
-
 
 
 .video-container {
@@ -169,6 +169,20 @@ footer {
     transform: rotateY(180deg);
 }
 
+.thefront::before {
+    content: attr(data-overlay-text);
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    font-size: 30px;
+    z-index: 2;
+}
+
 .thefront {
     position: absolute;
     width: 100%;
@@ -217,7 +231,7 @@ footer {
 }
 
 .info-overlay {
-    width: 45%;
+    width: 35%;
     aspect-ratio: 1 / 1;
     background-color: rgba(0, 0, 0, 0.5);
     color: white;
@@ -240,8 +254,24 @@ footer {
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); 
     margin-top: 5vw;
     margin-bottom: 5vw;
-    
+    padding: 50px;
+    background-color: #DDA15E;
 }
+
+#mountainsCollage > :first-child {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-column: 1 / -1;
+    background-color: white;
+    top: 0;
+    width: 100%;
+    height: 10vh;
+    position: sticky;
+    z-index: 2;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
 
 /* display overlay */
 .display {

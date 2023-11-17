@@ -44,8 +44,8 @@ function init() {
     // generate mountain information
     function generateInfo(_mountain) {
         return `
-        <div class="container results-container">
-            <img src="images/${_mountain.img}" alt="" class="results-img">
+        <div class="results-container div-card">
+            <img src="images/extra/park-placeholder.jpg" alt="" class="results-img">
             <div class="name-overlay">
                 <h4>${_mountain.name}</h4>
             </div>
