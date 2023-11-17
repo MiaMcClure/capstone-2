@@ -12,8 +12,13 @@
     <link rel="stylesheet" href="styles.css">
     <!-- test styles -->
     <style>
-      
-    
+        #search-by-name {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-self: center;
+            width: 50vw;
+        }
     </style>
 
 </head>
@@ -21,7 +26,24 @@
 <body>
     <header>
 
-        <!-- navigation here -->
+        <!-- Navbar -->
+
+        <!-- Navbar -->
+        <nav class="navbar navbar-expand-lg navbar-light bg-transparent shadow-5-strong">
+            <div class="nav">
+                <a class="navbar-brand" href="index.html">
+                    <img src="images/extra/park-logo.png" alt="Logo" width="30" height="30">
+                    Travel National Parks Foundation
+                </a>
+                <div class="navbar-nav">
+                    <a class="nav-link"  href="parks.html">Search National Parks</a>
+                    <a class="nav-link" href="mountains.html">View Mountains</a>
+                </div>
+            </div>
+            
+        </nav>
+        
+        <!-- Navbar -->
         <div>
             <!-- banner image here -->
 
@@ -43,59 +65,96 @@
     </div>
 
 
-    <!-- test card -->
-    <div class="results-container div-card">
-        <div class="container">
-            <div class="name-overlay">
-                <h4>${_mountain.name}</h4>
-            </div>
-            <div class="info-overlay">
-                <p> ${_mountain.desc} </p>
-                <p>Coordinates: ${_mountain.coords.lat}, ${_mountain.coords.lng} </p>
-                <p>Elevation: ${_mountain.elevation} </p>
-                <button class="btn" id="clear-mtn">Clear</button>
-            </div>
-        </div>
-        <img src="images/${_mountain.img}" alt="" class="results-img">
-    </div>
-
+    <a href="#" target="_blank"></a>
     <main>
-        <h1>Mountain Information</h1>
-        <!-- mountain selection -->
-        <div class="container">
-            <label for="mountainsSelection">Select a Mountain</label>
-            <div class="input-group mb-3">
-                <select name="mountains" id="mountainsSelection">
-                    <!-- use javascript to fill -->
-                </select>
 
-                <!-- button -->
-                <button class="btn" id="infoBtn">Get Info</button>
+        <div class="maincontainer">
+            <div class="thecard">
+                <!-- front -->
+                <div class="thefront" data-overlay-text="${_park.LocationName}"
+                    style="background-image: url('${_park.image}');">
+                </div>
+                <!-- back -->
+                <div class="theback">
+                    <div class="row">
+                        <div class="col-4">
+                            <img class="back-img" src="${_park.image}" alt="park-image">
+                        </div>
+                        <div class="park-info col-8 mt-3">
+                            <h5 class="card-title">${_park.LocationName}</h5>
+                            <br>
+                            <p>Visit ${_park.City}, ${_park.State} to experience stunningviews, watch wildlife, and learn about the
+                                inspiring history of this park.</p>
+                            <br>
+                            <div>
+                               <p>Name: ${_park.LocationName}</p> 
+                               <p>Address: ${_park.Address}</p>
+                               <p>city: ${_park.City}</p>
+                               <p>State: ${_park.State}</p>
+                               <p>Latitude: ${_park[index].Latitude}</p>
+                               <p>Longitude: ${_park[index].Longitude}</p>
+                            </div>
+                            <a href="${_park.Visit}" target="_blank"class="btn btn-primary">Visit</a>
+                        </div>
+                    </div>
+                </div>
             </div>
+    
         </div>
 
-        <!-- mountain results -->
-        <div id="mountainName">
-            <!-- display title with javascript -->
+        <!-- search inputs -->
+        <div class="container">
+            <form>
+                <div class="mb-3" id="search-by-name">
+                    <label for="byName" class="form-label">By Name</label>
+                    <input type="text" class="form-control" id="byName">
+                </div>
+                <div class="mb-3">
+                    <div class="form-group">
+                        <!-- selections -->
+                        <div class="row">
+                            <!-- location input -->
+                            <div class="col-4">
+                                <label for="byLocation">By Location</label>
+                                <select name="by-location" id="byLocation" class="form-control">
+                                    <option value="select">Select</option>
+                                    <!-- use javascript to fill -->
+                                </select>
+                            </div>
+                            <!-- type input -->
+                            <div class="col-4">
+                                <label for="byType">By Type</label>
+                                <select name="by-type" id="byType" class="form-control">
+                                    <option value="select">Select</option>
+                                    <!-- use javascript to fill -->
+                                </select>
+                            </div>
+                        </div>
+
+                        <!-- search and clear buttons -->
+                        <div class="row">
+                            <div class="input-group" id="search-clear">
+                                <button class="btn" id="search">Search</button>
+                                <button class="btn" id="clear">Clear</button>
+                            </div>
+                        </div>
+                    </div>
+            </form>
         </div>
-        <div id="mountainResults">
-            <!-- use javascript to fill with info -->
-        </div><!-- mountain results -->
-        <div id="mountainName">
-            <!-- display title with javascript -->
+
+        <!-- results title-->
+        <div id="results-title">
+            <!-- fill with javascript -->
         </div>
-        <div id="mountainResults">
-            <!-- use javascript to fill with info -->
-        </div>
-        <!-- explore mountains -->
-        <div id="mountainsCollage" class="div-card">
-            <h3>Explore Mountains</h3>
+
+        <!-- results -->
+        <div id="results">
             <!-- use javascript to fill -->
+
         </div>
 
-
+        <!-- explore park activities -->
     </main>
-
 
     <!-- footer -->
     <footer>

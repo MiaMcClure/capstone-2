@@ -53,7 +53,6 @@ function init() {
                 <p> ${_mountain.desc} </p>
                 <p>Coordinates: ${_mountain.coords.lat}, ${_mountain.coords.lng} </p>
                 <p>Elevation: ${_mountain.elevation} </p>
-                <button class="btn" id="clear-mtn">Clear</button>
             </div>
         </div>
         <img src="images/${_mountain.img}" alt="" class="results-img">
@@ -81,8 +80,22 @@ function init() {
         mountainInfo.scrollIntoView();
     }
 
+    
+
 
     // create event listeners
-    document.addEventListener('click', displayInfo)
+    
+    document.addEventListener('click', function (event) {
+        // Check if the clicked element is one of the specific buttons
+        if (event.target.classList.contains('imgBtn')) {
+            // Handle click for elements with the class 'imgBtn'
+            displayInfo(event);
+        } else if (event.target === infoBtn) {
+            // Handle click for the 'infoBtn' button
+            displayInfo(event);
+        }
+        // Add more conditions for other buttons if needed
+    });
+    
 }
 

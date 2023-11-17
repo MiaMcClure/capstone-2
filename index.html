@@ -15,7 +15,18 @@
 <body>
     <!-- header -->
     <header>
-        <!-- navigation here -->
+        <nav class="navbar navbar-expand-lg navbar-light bg-transparent shadow-5-strong">
+            <div class="nav">
+                <a class="navbar-brand" href="index.html">
+                    <img src="images/extra/park-logo.png" alt="Logo" width="30" height="30">
+                    Travel National Parks Foundation
+                </a>
+                <div class="navbar-nav">
+                    <a class="nav-link"  href="parks.html">Search National Parks</a>
+                    <a class="nav-link" href="mountains.html">View Mountains</a>
+                </div>
+            </div>
+        </nav>
     </header>
 
     <!-- links to parks and mountains pages -->
@@ -81,167 +92,39 @@
         </div>
 
         <!-- article TBD-->
-        <article id="home-article-1" class="div-card">
+        <article id="home-article-1">
             <div class="container row">
-                <picture class="col-4 m-3">
-                    <img src="images/Cabot-StoryImg.jpg" class="img-fluid" alt="image desc">
-                </picture>
-                <div class="col m-3">
-                    <h3>Some Title Here</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae numquam
-                        optio facilis et sint alias
-                        nobis aliquid quia pariatur, sit, quae dicta provident tempora amet itaque voluptatibus
-                        autem
-                        tempore doloribus?
-                        Ipsum fuga voluptatum dolorem suscipit adipisci, sed repudiandae omnis? Provident
-                        praesentium
-                        nesciunt ipsam non! Optio delectus voluptas incidunt est, sunt molestiae fuga voluptatibus,
-                        totam
-                        nam officiis aperiam aliquam. Minima, doloribus.</p>
+                <img src="images/extra/look-animals.jpeg" class="article-img" alt="look-animals">
+                <div class="article-text col m-3">
+                    <h3>Look Animals!</h3>
+                    <p>Watch animal species at a specific locations and time, either for research purposes or
+                        recreation.</p>
                 </div>
             </div>
         </article>
 
-        <!-- featured articles carousel -->
-        <section id="fetured-articles" class="div-card">
-            <h2 class="home-h2">Featured Articles</h2>
-            <div class="container">
-                <div class="row">
-                    <div class="col-sm-12">
-                        <div id="carouselExampleInterval" class="carousel slide carousel-dark" data-bs-ride="carousel">
-                            <div class="carousel-inner">
-                                <div class="carousel-item active" data-bs-interval="10000">
-                                    <div class="carousel-card-container">
-                                        <div class="row">
-                                            <div class="col col-sm-12 col-md-12 col-lg-4">
-                                                <!-- place card here -->
-                                                <div class="card"
-                                                    style="background: url('images/Adams-StoryImage_2.jpg') center/cover no-repeat; color: #fff;">
-                                                    <div class="card-body">
-                                                        <!-- Card content goes here -->
-                                                        <h5 class="card-title">Card Title</h5>
-                                                        <p class="card-text">Some text content for the card.</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="vanish col-lg-4">
-                                                <!-- place card here -->
-                                                <div class="card"
-                                                    style="background: url('images/Adams-StoryImage_2.jpg') center/cover no-repeat; color: #fff;">
-                                                    <div class="card-body">
-                                                        <!-- Card content goes here -->
-                                                        <h5 class="card-title">Card Title</h5>
-                                                        <p class="card-text">Some text content for the card.</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="vanish col-lg-4">
-                                                <!-- place card here -->
-                                                <div class="card"
-                                                    style="background: url('images/Adams-StoryImage_2.jpg') center/cover no-repeat; color: #fff;">
-                                                    <div class="card-body">
-                                                        <!-- Card content goes here -->
-                                                        <h5 class="card-title">Card Title</h5>
-                                                        <p class="card-text">Some text content for the card.</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="carousel-item" data-bs-interval="2000">
-                                    <div class="carousel-card-container">
-                                        <div class="row">
-                                            <div class="col col-sm-12 col-md-12 col-lg-4">
-                                                <!-- place card here -->
-                                                <div class="card"
-                                                    style="background: url('images/Adams-StoryImage_2.jpg') center/cover no-repeat; color: #fff;">
-                                                    <div class="card-body">
-                                                        <!-- Card content goes here -->
-                                                        <h5 class="card-title">Card Title</h5>
-                                                        <p class="card-text">Some text content for the card.</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="vanish col-lg-4">
-                                                <!-- place card here -->
-                                                <div class="card"
-                                                    style="background: url('images/Adams-StoryImage_2.jpg') center/cover no-repeat; color: #fff;">
-                                                    <div class="card-body">
-                                                        <!-- Card content goes here -->
-                                                        <h5 class="card-title">Card Title</h5>
-                                                        <p class="card-text">Some text content for the card.</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="vanish col-lg-4">
-                                                <!-- place card here -->
-                                                <div class="card"
-                                                    style="background: url('images/Adams-StoryImage_2.jpg') center/cover no-repeat; color: #fff;">
-                                                    <div class="card-body">
-                                                        <!-- Card content goes here -->
-                                                        <h5 class="card-title">Card Title</h5>
-                                                        <p class="card-text">Some text content for the card.</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <button class="carousel-control-prev" type="button"
-                                data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
-                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                <span class="visually-hidden">Previous</span>
-                            </button>
-                            <button class="carousel-control-next" type="button"
-                                data-bs-target="#carouselExampleInterval" data-bs-slide="next">
-                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                <span class="visually-hidden">Next</span>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <button class="btn btn-secondary m-2">Read More</button>
-        </section>
-
         <!-- second article -->
-        <article id="home-article-2" class="div-card">
+        <article id="home-article-2">
             <div class="container row">
-                <picture class="col-4 m-3">
-                    <img src="images/Cabot-StoryImg.jpg" class="img-fluid" alt="image desc">
-                </picture>
-                <div class="col m-3">
-                    <h3>Some Title Here</h3>
-                    <p class="home-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae numquam
-                        optio facilis et sint alias
-                        nobis aliquid quia pariatur, sit, quae dicta provident tempora amet itaque voluptatibus
-                        autem
-                        tempore doloribus?
-                        Ipsum fuga voluptatum dolorem suscipit adipisci, sed repudiandae omnis? Provident
-                        praesentium
-                        nesciunt ipsam non! Optio delectus voluptas incidunt est, sunt molestiae fuga voluptatibus,
-                        totam
-                        nam officiis aperiam aliquam. Minima, doloribus.</p>
+                <img src="images/extra/pretty-leaves.jpeg" class="article-img" alt="pretty-leaves">
+                <div class="article-text col m-3">
+                    <h3>It's Fall Season</h3>
+                    <p class="home-text">The feel of cooler temperatures after a long summer. A warm, visually pleasing
+                        palate of reds, oranges and browns. The taste of pumpkin spice in everything.</p>
                 </div>
             </div>
         </article>
 
         <!-- bottom image goes here -->
-        <div class="banner">
-            <p> fix this so full image shows</p>
+        <div class="banner bottom-banner">
+            <img src="images/extra/fall.jpg" alt="fall">
         </div>
 
     </main>
 
     <!-- footer -->
     <footer>
-        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ea fugit molestias, amet sunt ad optio, illum ipsam
-            accusamus iusto dicta cupiditate, cumque sed incidunt voluptatibus odio. Aut nobis excepturi libero!</p>
-        <hr>
-        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ea fugit molestias, amet sunt ad optio, illum ipsam
-            accusamus iusto dicta cupiditate, cumque sed incidunt voluptatibus odio. Aut nobis excepturi libero!</p>
+        <p>&copy; 2023 My Website</p>
     </footer>
 
     <!-- bootstrap js -->

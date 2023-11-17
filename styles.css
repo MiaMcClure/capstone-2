@@ -1,6 +1,37 @@
 /* all pages */
+
+h1 {
+    text-align: center;
+}
+
 h2 {
 text-align: center;
+}
+.navbar {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.7); 
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 3);
+    z-index: 5;
+    margin-top: 5px;
+    border-top: 2px solid black;;
+    border-bottom: 5px solid black;
+
+}
+.navbar-brand {
+    background-color: #606C38;
+    display:flex;
+    height:100%;
+    margin-left: 20px;
+    z-index: 6;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 3);
+
+}
+.navbar a {
+    padding: 15px;
+    text-decoration: none;
+    color: black;
 }
 
 .banner {
@@ -8,6 +39,10 @@ text-align: center;
     height: 25vw;
     overflow: hidden;
     margin-bottom: 100px;
+}
+
+.bottom-banner {
+margin-bottom: 0;
 }
 
 .banner>img {
@@ -40,12 +75,28 @@ footer {
 
 /* home page */
 #home-article-1 {
-    background-color: #DDA15E;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height:50vw;
+    width: 100%;
+    margin: auto;
+    overflow: scroll;
+    background-color:rgb(158,94,64);
+    color: #FEFAE0;
 }
 
 #home-article-2 {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
     background-color: #606C38;
     color: #FEFAE0;
+    height:50vw;
+    margin-top: 20px;
+    overflow: scroll;
 }
 
 #video-div-1 {
@@ -67,7 +118,6 @@ footer {
     background-color: #fefae0;
 }
 
-
 #home-overlap {
     display: flex;
     align-items: center;
@@ -82,6 +132,16 @@ footer {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 1);
     z-index: 2;
 }
+.article-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.article-img {
+    width: 50vw;
+    aspect-ratio: 2 /1;
+}
 
 .overlap-link {
     flex: 1;
@@ -90,7 +150,6 @@ footer {
     text-decoration: none;
     padding: 10px;
 }
-
 
 .video-container {
     position: absolute;
@@ -154,6 +213,47 @@ footer {
     padding: 2vw;
 }
 
+#no-results {
+    width: 100%;
+    height: 80vh;
+    background-image: url(images/extra/no-results.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#no-results > h2 {
+    background-color: black;
+    color: white;
+}
+
+#loation-type {
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+#search-by-name {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+   width: 55vw;
+   margin: auto;
+}
+
+.vertical-line {
+    width: 1px;
+    height: 50px;
+    margin: auto;
+    background-color: black;
+}
+
+.seperate {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px;
+}
+
 .maincontainer {
     position: relative;
     width: 80vw;
@@ -203,7 +303,6 @@ footer {
     backface-visibility: hidden;
     background-color: #606c38;
     color: white;
-    text-align: center;
     transform: rotateY(180deg);
 }
 
@@ -243,7 +342,7 @@ footer {
     margin-top: 5vw;
     margin-bottom: 5vw;
     padding: 50px;
-    background-color: #DDA15E;
+    background-color: rgb(158,94,64);
 }
 
 #mountainsCollage > :first-child {
