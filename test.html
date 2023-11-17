@@ -11,9 +11,11 @@
     <!-- custom css -->
     <link rel="stylesheet" href="styles.css">
     <!-- test styles -->
+    <style>
+      
     
-
     </style>
+
 </head>
 
 <body>
@@ -28,6 +30,34 @@
 
 
     </header>
+
+    <!-- page title -->
+    <!-- hero image -->
+    <div class="container" id="mountains-overlap">
+        <h1>Mountains</h1>
+    </div>
+
+    <!-- banner -->
+    <div class="banner">
+        <img src="images/extra/mountain-hero-img.jpg" alt="">
+    </div>
+
+
+    <!-- test card -->
+    <div class="results-container div-card">
+        <div class="container">
+            <div class="name-overlay">
+                <h4>${_mountain.name}</h4>
+            </div>
+            <div class="info-overlay">
+                <p> ${_mountain.desc} </p>
+                <p>Coordinates: ${_mountain.coords.lat}, ${_mountain.coords.lng} </p>
+                <p>Elevation: ${_mountain.elevation} </p>
+                <button class="btn" id="clear-mtn">Clear</button>
+            </div>
+        </div>
+        <img src="images/${_mountain.img}" alt="" class="results-img">
+    </div>
 
     <main>
         <h1>Mountain Information</h1>
@@ -87,5 +117,5 @@
     <script src="scripts/parkTypeData.js"></script>
     <script src="scripts/mountainData.js"></script>
     <script src="test.js"></script>
-    
+
 </body>

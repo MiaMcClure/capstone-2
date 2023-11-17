@@ -8,7 +8,7 @@ function init() {
     let viewImages = document.getElementById("mountainsCollage");
     let selectedMountain;
 
-    // generate mountains images and buttons
+    // put mountains images and buttons grid on page
     function generateDestinationImg(destination) {
         return `
         <div class="display">
@@ -45,7 +45,7 @@ function init() {
     function generateInfo(_mountain) {
         return `
         <div class="results-container div-card">
-            <img src="images/extra/park-placeholder.jpg" alt="" class="results-img">
+        <div class="container">
             <div class="name-overlay">
                 <h4>${_mountain.name}</h4>
             </div>
@@ -53,8 +53,11 @@ function init() {
                 <p> ${_mountain.desc} </p>
                 <p>Coordinates: ${_mountain.coords.lat}, ${_mountain.coords.lng} </p>
                 <p>Elevation: ${_mountain.elevation} </p>
+                <button class="btn" id="clear-mtn">Clear</button>
             </div>
-            </div>
+        </div>
+        <img src="images/${_mountain.img}" alt="" class="results-img">
+    </div>
         `
     }
     // display mountain info 
@@ -74,6 +77,8 @@ function init() {
 
         // display on page
         mountainInfo.innerHTML = display;
+        // move view to element
+        mountainInfo.scrollIntoView();
     }
 
 

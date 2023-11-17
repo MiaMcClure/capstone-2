@@ -27,15 +27,25 @@
 
     <!-- main content -->
     <main>
-        <h1>Mountain Information</h1>
+        <!-- hero image -->
+        <div class="container" id="mountains-overlap">
+            <h1>Mountain Information</h1>
+        </div>
+
+        <!-- banner -->
+        <div class="banner">
+            <img src="images/extra/mountain-hero-img.jpg" alt="mountain-hero-img">
+        </div>
+
+        <h2></h2>
+
         <!-- mountain selection -->
-        <div class="container">
-            <label for="mountainsSelection">Select a Mountain</label>
-            <div class="input-group mb-3">
-                <select name="mountains" id="mountainsSelection">
+        <div class="container" id="mtn-select-div">
+            <label for="mountainsSelection">Select a mountain to get mointain information</label>
+            <div class="input-group mb-3" id="mtn-select">
+                <select class="form-select" name="mountains" id="mountainsSelection">
                     <!-- use javascript to fill -->
                 </select>
-
                 <!-- button -->
                 <button class="btn" id="infoBtn">Get Info</button>
             </div>
@@ -49,14 +59,11 @@
             <!-- use javascript to fill with info -->
         </div>
 
-
         <!-- explore mountains -->
         <div id="mountainsCollage" class="div-card">
             <h3>Explore Mountains</h3>
             <!-- use javascript to fill -->
         </div>
-
-
     </main>
 
     <!-- footer -->

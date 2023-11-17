@@ -45,7 +45,6 @@ function init() {
     function generateInfo(_mountain) {
         return `
         <div class="results-container div-card">
-            <img src="images/extra/park-placeholder.jpg" alt="" class="results-img">
             <div class="name-overlay">
                 <h4>${_mountain.name}</h4>
             </div>
@@ -54,7 +53,8 @@ function init() {
                 <p>Coordinates: ${_mountain.coords.lat}, ${_mountain.coords.lng} </p>
                 <p>Elevation: ${_mountain.elevation} </p>
             </div>
-            </div>
+            <img src="images/extra/park-placeholder.jpg" alt="" class="results-img">
+        </div>
         `
     }
     // display mountain info 
@@ -74,6 +74,8 @@ function init() {
 
         // display on page
         mountainInfo.innerHTML = display;
+        // move view to element
+        mountainInfo.scrollIntoView();
     }
 
 
