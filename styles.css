@@ -1,5 +1,8 @@
 /* all pages */
+html {
+    /* scroll-snap-type: y mandatory; */
 
+}
 h1 {
     text-align: center;
 }
@@ -33,6 +36,12 @@ text-align: center;
     text-decoration: none;
     color: black;
 }
+.no-snap {
+    scroll-snap-type: none;
+}
+.navbar a:hover {
+    background-color: rgba(255, 255, 255, 0.588);
+}
 
 .banner {
     position: relative;
@@ -52,6 +61,7 @@ margin-bottom: 0;
 footer {
     background-color: #252A15;
     color:#FEFAE0;
+    text-align: center;
 }
 
 .div-card {
@@ -67,6 +77,11 @@ footer {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     overflow: auto;
 }
+
+.div-card, article, header {
+    scroll-snap-align: start;
+}
+
 
 .btn {
     background-color: #252A15;
